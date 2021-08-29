@@ -1,0 +1,154 @@
+Git
+
+버전관리란 ? 
+    여러 파일을 하나의 버전으로 묶어 관리하는 것 
+
+ 버전관리 시스템의 종류 
+ 1. 클라이언트 - 서버 모델 
+ - 클라이언트 : 정보를 제공 받는 측
+ - 서버 : 정보를 제공하는 측
+ - 하나의 중앙 서버로 여러 클라이언트들이 각자 필요한 데이터만 가져와서 작엄ㅇ르 하고 다시 중앙 서버로 보내서 통합하는 방식
+ - cvs ,svn
+
+ 2. 분산 모델 
+ - 하나의 중앙 서버가 존재하지만 여러 클라이언트들은 각자의 컴퓨터 저장소에 전체 사본을 가지고 작업하는 방식 
+ -Git
+
+git의 장점 
+1. 동시에 작업하는 사람들과 소스코드를 주고받을 필요가 없음 
+2. 같은 파일을 여러명이 동시에 병렬 개발이 가능 
+3. 변동 과정을 체계적으로 관리할 수 있고, 언제든지 지난 시점의 버전으로 되돌릴 수 있음
+4. 인터넷이 연결되지 않은 곳에서도 개발을 진행 할 수 있고, 중앙 서버의 데이터가 유실되어도 다시 복구 할 수 있다.
+
+
+터미널 기본 명령어 
+- ctrl + L : 화면 클리어 
+- pwd : 현재 디렉토리 경로를 표시 
+- dir : 현재 디렉토리에 존재하는 디렉토리와 파일을 표시  --> ls ( git 을 설치 후 ) 사용가능
+- cd : 다른 디렉토리로 이동 
+
+
+
+git 시작하기 
+
+- 구글에서 git 설치 
+( https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%84%A4%EC%B9%98)
+
+- git 설치 
+- 기본설정 설치 
+- cmder 를 껐다가 다시 실행
+
+
+git 명령어 
+
+1. 프로젝트 폴더 내에 로컬 저장소를 생성 
+ex  )  cd D:\~~~
+        git init
+        ls -al ( 숨긴 디렉토리 확인 )
+
+
+2. git에 버전 관리 할 파일을 선택 -> add -> stage에 올림 
+
+    git add index.html  -> 이파일을 선택 했다 .
+
+3. commit 하나의 버전으로 만들기 
+
+    git commit -m " index.html 커밋 "
+
+✔ 아래와 같이 에러가 발생하는 경우
+Author identity unknown
+*** Please tell me who you are.
+Run
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+fatal: unable to auto-detect email address (got 'admin@DESKTOP-R2NKGM0.(none)')
+
+
+==> 해결 방법 
+
+git config --global user.email "java-main@daum.net"
+git config --global user.name "Kim Seoung Tae" 
+
+
+== > 수정 
+
+ git config --global user.email " "
+git config --global user.name ""
+
+git commit -m index.html
+
+4. log 확인 하기 
+
+git log 
+
+
+git hub 
+- git 으로 버전관리한 코드를 올릴 수 있는 클라우드 서비스 
+- 단순한 저장만 하는 것이 아니라 유저들과 함께 코드를 공유하고 온라인으로 하나의 프로그램을 같이 제작할 수 있게 만듬
+
+* git 은 혼자 사용 할 수 있고 github 는 사람들과 버전을 관리하며 소스를 관리 할 수있는 클라우드 서비스 이다 .
+
+7. 여러 파일을 함께 선택 하는 방법 -> 스테이지에 현재 디렉토리에 있는 모든 파일을 올려준다 .
+
+    git add .  
+
+8. 로컬 저장소에 github저장소 주소 설정하기 
+
+    git remote add origin https://github.com/java-main/mySource.git
+
+9. 만든 커밋 된 파일을 github 에 푸쉬 
+
+    git push -u origin master --> 이전 사용자 
+    git push -u origin main --> 최근 사용자 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
